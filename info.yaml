@@ -15,13 +15,13 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "clck_psc"
-    - "digits"
-    - "LED_TEST"
-    - "seg7_control"
-    - "SPI_state_machine"
-    - "tenHz_gen"
-    - "top"
+    - "clck_psc.v"
+    - "digits.v"
+    - "LED_TEST.v"
+    - "seg7_control.v"
+    - "SPI_state_machine.v"
+    - "tenHz_gen.v"
+    - "top.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
