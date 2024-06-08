@@ -21,7 +21,7 @@
 
 module digits(
     input clk_10Hz,
-    input reset,
+    input rst_n,
     output reg [3:0] ones,
     output reg [3:0] tens,
     output reg [3:0] hundreds,
