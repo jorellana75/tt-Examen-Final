@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module digits(
-    input wire clk_10Hz,
-    input wire rst_n,
+    input clk,
+    input rst_n,
     output reg [3:0] ones,
     output reg [3:0] tens,
     output reg [3:0] hundreds,
@@ -29,7 +29,7 @@ module digits(
     );
     
     //ones reg control
-    always @(posedge clk_10Hz or posedge rst_n)
+    always @(posedge clk or posedge rst_n)
         if(rst_n)
             ones <= 0;
         else
@@ -39,7 +39,7 @@ module digits(
                 ones <= ones + 1;
                 
      //tens reg control
-     always @(posedge clk_10Hz or posedge rst_n)
+     always @(posedge clk or posedge rst_n)
         if(rst_n)
             tens <= 0;
         else
@@ -50,7 +50,7 @@ module digits(
                     tens <= tens + 1;
                     
        //hundreds reg control
-       always @(posedge clk_10Hz or posedge rst_n)
+       always @(posedge clk or posedge rst_n)
         if(rst_n)
             hundreds <= 0;
         else
@@ -61,7 +61,7 @@ module digits(
                     hundreds <= hundreds + 1;
                     
         //thousands reg control
-        always @(posedge clk_10Hz or posedge rst_n)
+        always @(posedge clk or posedge rst_n)
             if(rst_n)
                 thousands <= 0;
             else 
