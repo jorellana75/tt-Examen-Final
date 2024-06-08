@@ -48,7 +48,6 @@
 //    assign led_g = r_green;
     
 // endmodule 
-import chardet
 module LED_TEST(
     input clk,
     input DATA_VALID,
