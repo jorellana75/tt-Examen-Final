@@ -42,7 +42,7 @@ module tt_um_top_joms(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
-    clck_psc my_clk((CLK100MHZ), (internal_psc_clock));
+    clck_psc contador((CLK100MHZ), (internal_psc_clock));
     
     SPI_state_machine s1(
     .clk(internal_psc_clock),
