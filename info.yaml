@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Examen Final - SPI"      # Project title
-  author:       "Joshua Cotuc, José Orellana"      # Your name
+  author:       "Joshua Cotuc y José Orellana"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Comunicación serial por medio de SPI"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
