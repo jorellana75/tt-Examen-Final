@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 import chardet
-module top(
+module tt_um_top_joms(
     //input clk,
     input CLK100MHZ,
     input MISO,
