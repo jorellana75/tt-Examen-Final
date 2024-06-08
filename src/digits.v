@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module digits(
-    input clk_10Hz,
-    input rst_n,
+    input wire clk_10Hz,
+    input wire rst_n,
     output reg [3:0] ones,
     output reg [3:0] tens,
     output reg [3:0] hundreds,
