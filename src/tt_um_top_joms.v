@@ -54,29 +54,47 @@ module tt_um_top_joms(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
-    clck_psc contador((CLK100MHZ), (internal_psc_clock));
+    clck_psc contador((clk), (internal_psc_clock));
     
+    //SPI_state_machine s1(
+    //.clk(internal_psc_clock),
+   // .MISO(MISO),
+    //.MOSI(MOSI),
+    //.SCK(SCK),
+    //.o_DATA(w_DATA),
+    //.CS(CS),
+    //.DATA_VALID(w_DATA_VALID) 
+    //);
+
     SPI_state_machine s1(
     .clk(internal_psc_clock),
-    .MISO(MISO),
-    .MOSI(MOSI),
-    .SCK(SCK),
+    .MISO(ui_in[0]),
+    .MOSI(uo_out[0]),
+    .SCK(uo_out[1]),
     .o_DATA(w_DATA),
-    .CS(CS),
+    .CS(uo_out[2]),
     .DATA_VALID(w_DATA_VALID) 
     );
     
+    //LED_TEST l1(
+   // .clk(internal_psc_clock),
+   // .DATA_VALID(w_DATA_VALID),
+    //.DATA(w_DATA),
+    //.led_b(led_b),
+    //.led_g(led_g)
+    //);
+
     LED_TEST l1(
     .clk(internal_psc_clock),
     .DATA_VALID(w_DATA_VALID),
     .DATA(w_DATA),
-    .led_b(led_b),
-    .led_g(led_g)
+    .led_b(uo_out[3]),
+    .led_g(uo_out[4])
     );
     
  
     tenHz_gen hz10(
-    .clk_100MHz(CLK100MHZ), 
+    .clk_100MHz(clk), 
     .reset(rst_n),  
     .clk_10Hz(w_10Hz)
     );
@@ -90,14 +108,14 @@ module tt_um_top_joms(
     .thousands(w_1000s));
     
     seg7_control seg7(
-    .clk_100MHz(CLK100MHZ), 
+    .clk_100MHz(clk), 
     .reset(rst_n), 
     .ones(w_1s), 
     .tens(w_10s),
     .hundreds(w_100s), 
     .thousands(w_1000s), 
-    .seg(seg), 
-    .digit(digit)
+    .seg(uio_out), 
+    .digit(uio_oe)
     );
     
    assign led_clk = internal_psc_clock;
