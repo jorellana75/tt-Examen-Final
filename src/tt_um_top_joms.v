@@ -59,7 +59,7 @@ module tt_um_top_joms(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
-    clck_psc contador((clk), (internal_psc_clock));
+    //clck_psc contador((clk), (internal_psc_clock));
     
     //SPI_state_machine s1(
     //.clk(internal_psc_clock),
@@ -98,35 +98,35 @@ module tt_um_top_joms(
     );
     
  
-    tenHz_gen hz10(
+    //tenHz_gen hz10(
     //.clk_100MHz(clk),
-    .clk(clk),
-    .rst_n(rst_n),  
-    .clk_10Hz(w_10Hz)
-    );
+    //.clk(clk),
+   // .rst_n(rst_n),  
+    //.clk_10Hz(w_10Hz)
+   // );
     
-    digits digs(
+    //digits digs(
     //.clk_10Hz(w_10Hz),
-    .clk(clk),
-    .rst_n(rst_n),  
-    .ones(w_1s), 
-    .tens(w_10s), 
-    .hundreds(w_100s), 
-    .thousands(w_1000s));
+    //.clk(clk),
+    //.rst_n(rst_n),  
+    //.ones(w_1s), 
+    //.tens(w_10s), 
+    //.hundreds(w_100s), 
+    //.thousands(w_1000s));
     
-    seg7_control seg7(
+    //seg7_control seg7(
     //.clk_100MHz(clk),
-    .clk(clk),
-    .rst_n(rst_n), 
-    .ones(w_1s), 
-    .tens(w_10s),
-    .hundreds(w_100s), 
-    .thousands(w_1000s), 
-    .seg(uio_out), 
-    .digit(uio_oe)
-    );
+    //.clk(clk),
+    //.rst_n(rst_n), 
+    //.ones(w_1s), 
+    //.tens(w_10s),
+    //.hundreds(w_100s), 
+    //.thousands(w_1000s), 
+    //.seg(uio_out), 
+    //.digit(uio_oe)
+    //);
     
-    assign uo_out[5] = internal_psc_clock;
+    //assign uo_out[5] = internal_psc_clock;
     //assign clk = internal_psc_clock;
     
 endmodule
