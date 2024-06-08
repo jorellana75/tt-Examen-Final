@@ -30,7 +30,7 @@ module tt_um_top_joms(
     input wire [7:0] uio_in,
     output wire [7:0] uo_out,
     output wire [7:0] uio_out,
-    output wire [7:0] uio_oe,
+    output wire [7:0] uio_oe
     //output wire MOSI,
     //output wire SCK,
     //output wire CS,
