@@ -21,7 +21,7 @@
 
 module tenHz_gen(
     input clk_100MHz,
-    input reset,
+    input rst_n,
     output clk_10Hz
     );
     
