@@ -1,7 +1,5 @@
-
-
 `timescale 1ns / 1ns
-
+import chardet
 module SPI_state_machine(
 	input clk,
 	input clk10,
