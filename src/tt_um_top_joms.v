@@ -119,6 +119,6 @@ module tt_um_top_joms(
     );
     
    assign led_clk = internal_psc_clock;
-   assign clk = internal_psc_clock;
+   //assign clk = internal_psc_clock;
     
 endmodule
