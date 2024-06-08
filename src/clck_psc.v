@@ -9,9 +9,7 @@ module clck_psc (
     // Siempre aumenta el contador en cada flanco de subida del reloj
     always @(posedge CLK100MHZ) begin
         contador <= contador + 1;
+        LED0 <= contador[13];  // Asignación de LED0 dentro del bloque always
     end
 
-    // LED0 se activa cada 10 kHz (100 MHz / 10000)
-    assign LED0 = contador[13];  // Divisor para obtener 10 kHz
 endmodule
-
