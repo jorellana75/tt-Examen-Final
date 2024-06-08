@@ -26,6 +26,7 @@ module tt_um_top_joms(
     input reset,
     input rst_n,
     input ena,
+    input ui_in,
     output MOSI,
     output SCK,
     output CS,
