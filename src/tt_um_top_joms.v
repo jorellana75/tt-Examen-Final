@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module tt_um_top_joms(
-    //input clk,
+    input clk,
     input CLK100MHZ,
     input MISO,
     input reset,
