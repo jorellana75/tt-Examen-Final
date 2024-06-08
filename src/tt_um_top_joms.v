@@ -68,7 +68,7 @@ module tt_um_top_joms(
 
     SPI_state_machine s1(
     .clk(internal_psc_clock),
-    .MISO(ui_in[0]),
+    .MISO(ui_in[1]),
     .MOSI(uo_out[0]),
     .SCK(uo_out[1]),
     .o_DATA(w_DATA),
@@ -94,7 +94,7 @@ module tt_um_top_joms(
     
  
     tenHz_gen hz10(
-    .clk_100MHz(uio_in[1]), 
+    .clk_100MHz(ui_in[2]), 
     .reset(rst_n),  
     .clk_10Hz(w_10Hz)
     );
@@ -108,7 +108,7 @@ module tt_um_top_joms(
     .thousands(w_1000s));
     
     seg7_control seg7(
-    .clk_100MHz(uio_in[2]), 
+    .clk_100MHz(ui_in[3]), 
     .reset(rst_n), 
     .ones(w_1s), 
     .tens(w_10s),
