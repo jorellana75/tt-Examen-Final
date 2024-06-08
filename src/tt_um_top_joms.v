@@ -30,7 +30,7 @@ module tt_um_top_joms(
     input [7:0] uio_in,
     //output [7:0] uo_out,
     //output [7:0] uio_out,
-    //output [7:0] uio_oe,
+    output [7:0] uio_oe,
     output MOSI,
     output SCK,
     output CS,
