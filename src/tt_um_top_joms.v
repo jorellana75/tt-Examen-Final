@@ -26,8 +26,8 @@ module tt_um_top_joms(
     input reset,
     input rst_n,
     input ena,
-    //input [7:0] ui_in,
-    //input [7:0] uio_in,
+    input [7:0] ui_in,
+    input [7:0] uio_in,
     //output [7:0] uo_out,
     //output [7:0] uio_out,
     //output [7:0] uio_oe,
@@ -42,11 +42,11 @@ module tt_um_top_joms(
     output [3:0] digit
     );
 
-    reg [7:0] ui_in;
-    reg [7:0] uio_in;
-    wire [7:0] uo_out;
-    wire [7:0] uio_out;
-    wire [7:0] uio_oe;
+    //reg [7:0] ui_in;
+    //reg [7:0] uio_in;
+    //wire [7:0] uo_out;
+    //wire [7:0] uio_out;
+    //wire [7:0] uio_oe;
 
     wire [11:0]w_DATA;
     wire w_DATA_VALID;
