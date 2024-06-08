@@ -38,8 +38,8 @@ module tt_um_top_joms(
     //output wire led_g,
     //output wire led_clk,
     //output clk,
-    output wire [0:6] seg,
-    output wire [3:0] digit
+    //output wire [0:6] seg,
+    //output wire [3:0] digit
     );
 
     //reg [7:0] ui_in;
