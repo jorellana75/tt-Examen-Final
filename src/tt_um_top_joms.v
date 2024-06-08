@@ -36,7 +36,7 @@ module tt_um_top_joms(
     //output wire CS,
     //output wire led_b,
     //output wire led_g,
-    //output wire led_clk,
+    output wire led_clk,
     //output clk,
     //output wire [0:6] seg,
     //output wire [3:0] digit
@@ -54,7 +54,7 @@ module tt_um_top_joms(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
-    clck_psc contador((uio_in[0]), (internal_psc_clock));
+    clck_psc contador((ui_in[0]), (internal_psc_clock));
     
     //SPI_state_machine s1(
     //.clk(internal_psc_clock),
