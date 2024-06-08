@@ -55,7 +55,7 @@ module tt_um_top_joms(
 
     wire [11:0]w_DATA;
     wire w_DATA_VALID;
-    wire internal_psc_clock;
+    //wire internal_psc_clock;
    // wire w_10Hz;
     //wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
@@ -72,7 +72,7 @@ module tt_um_top_joms(
     //);
 
     SPI_state_machine s1(
-    .clk(internal_psc_clock),
+    .clk(clk),
     .MISO(ui_in[1]),
     .MOSI(uo_out[0]),
     .SCK(uo_out[1]),
@@ -90,7 +90,7 @@ module tt_um_top_joms(
     //);
 
     LED_TEST l1(
-    .clk(internal_psc_clock),
+    .clk(clk),
     .DATA_VALID(w_DATA_VALID),
     .DATA(w_DATA),
     .led_b(uo_out[3]),
