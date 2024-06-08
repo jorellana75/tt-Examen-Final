@@ -21,7 +21,7 @@
 
 module seg7_control(
     input clk_100MHz,
-    input reset,
+    input rst_n,
     input [3:0] ones,
     input [3:0] tens,
     input [3:0] hundreds,
