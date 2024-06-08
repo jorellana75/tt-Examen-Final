@@ -36,7 +36,7 @@ module tt_um_top_joms(
     //output wire CS,
     //output wire led_b,
     //output wire led_g,
-    output wire led_clk,
+    //output wire led_clk,
     //output clk,
     //output wire [0:6] seg,
     //output wire [3:0] digit
@@ -118,7 +118,7 @@ module tt_um_top_joms(
     .digit(uio_oe)
     );
     
-   assign led_clk = internal_psc_clock;
-   //assign clk = internal_psc_clock;
+    assign uo_out[5] = internal_psc_clock;
+    //assign clk = internal_psc_clock;
     
 endmodule
