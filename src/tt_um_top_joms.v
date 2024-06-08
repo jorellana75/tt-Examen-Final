@@ -21,7 +21,7 @@
 
 module tt_um_top_joms(
     input wire clk,
-    //input wire CLK100MHZ,
+    input wire CLK100MHZ,
     //input wire MISO,
     //input reset,
     input wire rst_n,
@@ -54,7 +54,7 @@ module tt_um_top_joms(
     wire w_10Hz;
     wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
-    clck_psc contador((clk), (internal_psc_clock));
+    clck_psc contador((CLK100MHZ), (internal_psc_clock));
     
     //SPI_state_machine s1(
     //.clk(internal_psc_clock),
@@ -94,7 +94,7 @@ module tt_um_top_joms(
     
  
     tenHz_gen hz10(
-    .clk_100MHz(clk), 
+    .clk_100MHz(CLK100MHZ), 
     .reset(rst_n),  
     .clk_10Hz(w_10Hz)
     );
@@ -108,7 +108,7 @@ module tt_um_top_joms(
     .thousands(w_1000s));
     
     seg7_control seg7(
-    .clk_100MHz(clk), 
+    .clk_100MHz(CLK100MHZ), 
     .reset(rst_n), 
     .ones(w_1s), 
     .tens(w_10s),
