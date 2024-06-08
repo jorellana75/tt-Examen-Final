@@ -47,7 +47,7 @@ module seg7_control(
     reg [16:0] digit_timer;     // counter for digit refresh
     
     // Logic for controlling digit select and digit timer
-    always @(posedge clk_100MHz or posedge rst_n) begin
+    always @(posedge clk or posedge rst_n) begin
         if(rst_n) begin
             digit_select <= 0;
             digit_timer <= 0; 
