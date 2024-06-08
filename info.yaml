@@ -26,9 +26,9 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "JA1"
-  ui[1]: "JA7"
-  ui[2]: ""
+  ui[0]: "CLK100MHZ"
+  ui[1]: "MISO"
+  ui[2]: "reset"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
@@ -36,13 +36,13 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "JA2"
-  uo[1]: "JA3"
-  uo[2]: "JA4"
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
+  uo[0]: "MOSI"
+  uo[1]: "SCK"
+  uo[2]: "CS"
+  uo[3]: "led_b"
+  uo[4]: "led_g"
+  uo[5]: "led_clk"
+  uo[6]: "clk"
   uo[7]: ""
 
   # Bidirectional pins
