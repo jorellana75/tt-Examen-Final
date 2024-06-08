@@ -4,11 +4,13 @@
 
 module SPI_state_machine(
 	input clk,
+	input clk10,
 	input MISO,                // data out of ADC (Dout pin)
 	output MOSI,               // Data into ADC (Din pin)
 	output SCK, 	           // SPI clock
 	output [11:0] o_DATA,      // 12 bit word (for other modules)
 	output CS,                 // Chip Select
+	output led2,
 	output DATA_VALID          // is high when there is a full 12 bit word. 
 	);
 	
@@ -24,6 +26,7 @@ module SPI_state_machine(
 	localparam TRANSMITTING = 2;    // set the sample channel, sampling mode, etc...
 	localparam RECEIVING = 3;       // convert the bitstream into parellel word
 	
+	reg d_led;
 	reg [7:0] SCK_counter = 0;       // for the output SPI clock
 	reg r_MOSI = 0; 
 	reg [11:0] r_DATA;
@@ -148,21 +151,27 @@ module SPI_state_machine(
 								begin 
 									r_DATA[11] <= MISO;
 									r_DV <= 0;
+									d_led <= 1;
+									
+									
 								end
 							if (sample_counter == 1268)
 								begin 
 									r_DATA[10] <= MISO;
 									r_DV <= 0;
+									d_led <= 0;
 								end 
 							if (sample_counter == 1444)
 								begin 
 									r_DATA[9] <= MISO;
 									r_DV <= 0;
+									d_led <= 1;
 								end 
 							if (sample_counter == 1620)
 								begin 
 									r_DATA[8] <= MISO;
 									r_DV <= 0;
+									d_led <= 0;
 								end 
 							if (sample_counter == 1796)
 								begin 
@@ -230,10 +239,10 @@ module SPI_state_machine(
 	assign MOSI = r_MOSI;
 	assign o_DATA = r_DATA;  
 	assign DATA_VALID = r_DV; 
+	assign led2 = d_led;
 
 		
 endmodule
-
  
  		
 
