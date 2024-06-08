@@ -23,7 +23,7 @@ module tt_um_top_joms(
     input clk,
     input CLK100MHZ,
     input MISO,
-  //  input reset,
+    input reset,
     input rst_n,
     output MOSI,
     output SCK,
