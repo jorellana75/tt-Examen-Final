@@ -56,8 +56,8 @@ module tt_um_top_joms(
     wire [11:0]w_DATA;
     wire w_DATA_VALID;
     wire internal_psc_clock;
-    wire w_10Hz;
-    wire [3:0] w_1s, w_10s, w_100s, w_1000s;
+   // wire w_10Hz;
+    //wire [3:0] w_1s, w_10s, w_100s, w_1000s;
     
     //clck_psc contador((clk), (internal_psc_clock));
     
