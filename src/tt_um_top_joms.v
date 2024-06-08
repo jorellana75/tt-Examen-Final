@@ -94,13 +94,15 @@ module tt_um_top_joms(
     
  
     tenHz_gen hz10(
-    .clk_100MHz(clk), 
+    //.clk_100MHz(clk),
+    .clk(clk),
     .rst_n(rst_n),  
     .clk_10Hz(w_10Hz)
     );
     
     digits digs(
-    .clk_10Hz(w_10Hz), 
+    //.clk_10Hz(w_10Hz),
+    .clk(clk),
     .rst_n(rst_n),  
     .ones(w_1s), 
     .tens(w_10s), 
@@ -108,7 +110,8 @@ module tt_um_top_joms(
     .thousands(w_1000s));
     
     seg7_control seg7(
-    .clk_100MHz(clk), 
+    //.clk_100MHz(clk),
+    .clk(clk),
     .rst_n(rst_n), 
     .ones(w_1s), 
     .tens(w_10s),
