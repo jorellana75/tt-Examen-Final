@@ -48,6 +48,7 @@
 //    assign led_g = r_green;
     
 // endmodule 
+import chardet
 module LED_TEST(
     input clk,
     input DATA_VALID,
@@ -60,7 +61,7 @@ module LED_TEST(
     
     always @(posedge clk)
     begin
-        if (DATA_VALID)  // Asegurarse de que los datos son v·lidos antes de procesar
+        if (DATA_VALID)  // Asegurarse de que los datos son v√°lidos antes de procesar
         begin
             if (DATA <= 12'b100000000000)  // Comparar con 2048 (1.65V)
             begin
