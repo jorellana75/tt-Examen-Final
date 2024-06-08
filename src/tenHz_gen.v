@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module tenHz_gen(
-    input wire clk_100MHz,
-    input wire rst_n,
+    input clk,
+    input rst_n,
     output clk_10Hz
     );
     
