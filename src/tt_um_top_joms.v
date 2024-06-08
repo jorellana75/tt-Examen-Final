@@ -23,7 +23,8 @@ module tt_um_top_joms(
     input clk,
     input CLK100MHZ,
     input MISO,
-    input reset,
+  //  input reset,
+    input rst_n,
     output MOSI,
     output SCK,
     output CS,
@@ -64,13 +65,13 @@ module tt_um_top_joms(
  
     tenHz_gen hz10(
     .clk_100MHz(CLK100MHZ), 
-    .reset(reset), 
+    .reset(rst_n),  
     .clk_10Hz(w_10Hz)
     );
     
     digits digs(
     .clk_10Hz(w_10Hz), 
-    .reset(reset), 
+    .reset(rst_n),  
     .ones(w_1s), 
     .tens(w_10s), 
     .hundreds(w_100s), 
@@ -78,7 +79,7 @@ module tt_um_top_joms(
     
     seg7_control seg7(
     .clk_100MHz(CLK100MHZ), 
-    .reset(reset), 
+    .reset(rst_n), 
     .ones(w_1s), 
     .tens(w_10s),
     .hundreds(w_100s), 
