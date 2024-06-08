@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
     
 //endmodule
-import chardet
+
 module clck_psc(
     input CLK100MHZ,
     output LED0
