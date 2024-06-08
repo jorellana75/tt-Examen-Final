@@ -44,6 +44,7 @@ module tt_um_top_joms(
     //input reset,
     );
 
+    assign uo_out[5]=1'b0;
     assign uo_out[6]=1'b0;
     assign uo_out[7]=1'b0;
 
@@ -64,6 +65,22 @@ module tt_um_top_joms(
 	assign uio_oe[5]=1'b0;
 	assign uio_oe[6]=1'b0;
 	assign uio_oe[7]=1'b0;
+
+	//assign ui_in[0]=1'b0;
+	//assign ui_in[2]=1'b0;
+	//assign ui_in[3]=1'b0;
+	//assign ui_in[4]=1'b0;
+	//assign ui_in[5]=1'b0;
+	//assign ui_in[6]=1'b0;
+	//assign ui_in[7]=1'b0;
+
+	//assign ui_in[0]=1'b0;
+	//assign ui_in[2]=1'b0;
+	//assign ui_in[3]=1'b0;
+	//assign ui_in[4]=1'b0;
+	//assign ui_in[5]=1'b0;
+	//assign ui_in[6]=1'b0;
+	//assign ui_in[7]=1'b0;
     
 
     //reg [7:0] ui_in;
