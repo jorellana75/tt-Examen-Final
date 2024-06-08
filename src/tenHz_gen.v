@@ -28,7 +28,7 @@ module tenHz_gen(
     reg [22:0] ctr_reg = 0; //23 bits to cover 5,000,000
     reg clk_out_reg = 0;
     
-    always @(posedge clk_100MHz or posedge rst_n)
+    always @(posedge clk or posedge rst_n)
         if(rst_n) begin
             ctr_reg <= 0;
             clk_out_reg <= 0;
