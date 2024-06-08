@@ -48,11 +48,3 @@ module clck_psc(
     assign LED0 = myreg[13];  // Divisor para obtener 10 kHz
     
 endmodule
-
-
-
-
-
-
-
-
