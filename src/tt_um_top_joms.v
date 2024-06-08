@@ -21,8 +21,8 @@
 
 module tt_um_top_joms(
     input wire clk,
-    input CLK100MHZ,
-    input MISO,
+    input wire CLK100MHZ,
+    input wire MISO,
     //input reset,
     input wire rst_n,
     input wire ena,
@@ -31,15 +31,15 @@ module tt_um_top_joms(
     output wire [7:0] uo_out,
     output wire [7:0] uio_out,
     output wire [7:0] uio_oe,
-    output MOSI,
-    output SCK,
-    output CS,
-    output led_b,
-    output led_g,
-    output led_clk,
+    output wire MOSI,
+    output wire SCK,
+    output wire CS,
+    output wire led_b,
+    output wire led_g,
+    output wire led_clk,
     //output clk,
-    output [0:6] seg,
-    output [3:0] digit
+    output wire [0:6] seg,
+    output wire [3:0] digit
     );
 
     //reg [7:0] ui_in;
