@@ -33,7 +33,7 @@
 //    assign LED0 = myreg[26];
     
 //endmodule
-
+import chardet
 module clck_psc(
     input CLK100MHZ,
     output LED0
