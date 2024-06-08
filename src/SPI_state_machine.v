@@ -2,7 +2,7 @@
 
 module SPI_state_machine(
 	input clk,
-	input clk10,
+	//input clk10,
 	input MISO,                // data out of ADC (Dout pin)
 	output MOSI,               // Data into ADC (Din pin)
 	output SCK, 	           // SPI clock
