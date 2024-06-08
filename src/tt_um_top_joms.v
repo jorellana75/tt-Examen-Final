@@ -31,7 +31,7 @@ module tt_um_top_joms(
     output led_b,
     output led_g,
     output led_clk,
-    output clk,
+    //output clk,
     output [0:6] seg,
     output [3:0] digit
     );
